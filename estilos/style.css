@@ -8,27 +8,27 @@
 }
 
 html, body {
-    height: 100vh; /*100% da altura do elemento*/
-    width: 100vw;  /*100% da largura*/
+    height: 100vh; /*100% da altura disponível*/
+    width: 100vw;  /*100% da largura disponível*/
     background-color: black;
 }
 
 body {
-    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
-    background-size: cover;
-    background-attachment: fixed;
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center; /* a imagem não será repetida infinatmente dentro do elemento e está alinhada ao centro e por cima*/
+    background-size: cover; /*redimensiona a imagem de forma a cobrir o conainer inteiro*/ 
+    background-attachment: fixed; /*fundo fixo*/
 }
 
 main {
-    height: 100vh; /*100% da altura*/
+    height: 100vh; /*100% da altura disponível*/
     position: relative;
 }
 
 section#telefone {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%; /*especificações de posicionamento dentro do elemente antecessor (possível por conta do position absolute*/
+    left: 50%;/*especificações de posicionamento dentro do elemente antecessor (possível por conta do position absolute*/
+    transform: translate(-50%, -50%); /* alinhamento do elemento de acordo com o centro do mesmo*/
     height: 627px;
     width: 311px;
     background: url(../imagens/frame-iphone.png)
