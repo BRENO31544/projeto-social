@@ -34,10 +34,29 @@ section#telefone {
     background: url(../imagens/frame-iphone.png)
 }
 
-iframe#tela {
-    position: relative;
-    top: 80px;
-    left: 22px;
+iframe#tela { /*definições da tela principal do celular dentro do iframe*/
+    position: relative; /*position relative para que haja uma manipulação da imagem dentro do iframe*/
+    top: 80px; /*necessário devido "position: relative*/
+    left: 22px; /*necessário devido "position: relative*/
     width: 269px;
     height: 471px;
+}
+
+section#redes-sociais{ /*para mexer apenas com a barra de botões flutuantes*/
+    text-align: right; 
+}
+
+section#redes-sociais img { /* para mexer com as IMAGENS dos botões flutuantes*/
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%; /*para deixar os botões redondos*/
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400); /*sombra dos botões para dar profundidade*/
+    box-sizing: border-box; /*para que a sombra seja imbutida na imagem (como uma borda)*/
+}
+
+section#redes-sociais img:hover{ /*configurações dos botões ao passar o mouse*/
+    border: 2px solid rgba(255, 255, 255, 0.600);
+    transform: translate(-3px, -3px); /*movimentação de transição definida em pixels para a esqueda e para cima*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.600); /*largura e cor de borda/sobra*/
+    transition: transform .3s, border .1s; /*tempo das transições para destaque dos botões e das borda/sobra*/
 }
